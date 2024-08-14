@@ -56,16 +56,16 @@ function FooterEvent() {
             />
           </a>
         </div>
-        <p className="text-[#818181] text-sm">2024 © All Rights Reserved</p>
+        <p className="text-black text-sm">2024 © All Rights Reserved</p>
       </div>
 
-      <div className="bg-blue-100 flex flex-col justify-start items-start text-black p-4 rounded-xl gap-1">
+      <div className="flex flex-col justify-start items-start text-black p-4 rounded-xl gap-1">
         <p>About</p>
         <p>Our mission</p>
         <p>Privacy Policy</p>
         <p>Terms of service</p>
       </div>
-      <div className="bg-blue-100 flex flex-col justify-start items-start text-black p-4 rounded-xl gap-1">
+      <div className="flex flex-col justify-start items-start text-black p-4 rounded-xl gap-1">
         <p>Services</p>
         <p>Products</p>
         <p>Join our team</p>
