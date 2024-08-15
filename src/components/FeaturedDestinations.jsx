@@ -34,20 +34,17 @@ function FeaturedDestinations() {
                   <a href="" className="oh">
                     <span className="oh__inner">Article</span>
                   </a>
-                  <a
-                    href="https://tympanus.net/Development/ParanoiaSlideshow/"
-                    className="oh"
-                  >
+                  <a href="/" className="oh">
                     <span className="oh__inner">Previous demo</span>
                   </a>
-                  <a href="https://github.com/codrops/GridZoom/" className="oh">
+                  <a href="/" className="oh">
                     <span className="oh__inner">GitHub</span>
                   </a>
                 </nav>
               </div>
             </div>
             <div className="grid__cell grid__cell-c2-r2 grid__cell--padded">
-              <a href="https://twitter.com/codrops" className="oh">
+              <a href="/" className="oh">
                 <span className="oh__inner">@setografi</span>
               </a>
             </div>
