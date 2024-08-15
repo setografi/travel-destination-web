@@ -1,4 +1,4 @@
-import { ImageCell } from "../Freatured/ImageCell";
+import { ImageCell } from "./ImageCell";
 import { calcWinsize, adjustedBoundingRect } from "./utils";
 import { TextReveal } from "./textReveal";
 import { gsap } from "gsap";
@@ -13,7 +13,7 @@ window.addEventListener("resize", () => (winsize = calcWinsize()));
 /**
  * Class representing a grid of images, where the grid can be zoomed to the clicked image cell
  */
-export class Grid {
+export class GridItem {
   // DOM elements
   DOM = {
     // main element (.grid)

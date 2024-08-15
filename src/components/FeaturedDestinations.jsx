@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
 import { preloadImages } from "./Freatured/utils";
-import { Grid } from "./Freatured/Grid";
+import { GridItem } from "./Freatured/GridItem";
 import gsap from "gsap";
 
 function FeaturedDestinations() {
   useEffect(() => {
     // Initialize the grid
-    new Grid(document.querySelector(".grid--large"));
+    new GridItem(document.querySelector(".grid--large"));
 
     // Preload images and then remove loader (loading class) from body
     preloadImages(".grid__cell-img-inner, .slide-nav__img").then(() => {
