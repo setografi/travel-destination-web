@@ -1,6 +1,6 @@
 import { ImageCell } from "./ImageCell";
 import { calcWinsize, adjustedBoundingRect } from "./utils";
-import { TextReveal } from "./textReveal";
+import { TextReveal } from "./TextReveal";
 import { gsap } from "gsap";
 
 // body element
