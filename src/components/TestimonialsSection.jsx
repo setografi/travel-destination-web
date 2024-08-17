@@ -10,7 +10,7 @@ function TestimonialsSection() {
   ];
 
   return (
-    <section id="testimonials" className="w-full h-full py-16 bg-white">
+    <section id="testimonials" className="bg-whiteText w-full h-full py-16">
       <h2 className="text-4xl text-center font-semibold mb-8">
         What Our Users Say
       </h2>

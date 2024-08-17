@@ -19,7 +19,7 @@ const NavbarEvent = () => {
   return (
     <nav
       ref={navbarRef}
-      className="fixed z-20 top-6 md:top-10 w-full px-6 xl:px-20 2xl:px-6 2xl:w-[83.5rem] 2xl:container 2xl:mx-auto"
+      className="absolute z-20 top-6 md:top-10 w-full px-6 md:px-20"
     >
       <div className=" bg-white rounded-2xl px-4 md:px-8 py-3">
         <div className="flex items-center justify-between">
@@ -34,7 +34,7 @@ const NavbarEvent = () => {
 
           <button
             onClick={handleMenuClick}
-            className="lg:hidden py-2 md:py-[10px] px-3 md:px-4 rounded-xl text-white bg-blue-100"
+            className="lg:hidden py-2 md:py-[10px] px-3 md:px-4 rounded-xl text-white bg-bluePrimary"
           >
             <i className="ri-menu-line"></i>
           </button>
@@ -44,33 +44,33 @@ const NavbarEvent = () => {
             <div className="flex gap-4 font-semibold text-sm">
               <a
                 href="/"
-                className="px-4 py-2 text-gray-800 hover:text-blue-100"
+                className="px-4 py-2 text-gray-800 hover:text-blueprimary"
               >
                 Home
               </a>
               <a
-                href="#destinations"
-                className="px-4 py-2 text-gray-800 hover:text-blue-100"
+                href="#service"
+                className="px-4 py-2 text-gray-800 hover:text-blueprimary"
               >
-                Destinations
+                Services
               </a>
               <a
                 href="#about"
-                className="px-4 py-2 text-gray-800 hover:text-blue-100"
+                className="px-4 py-2 text-gray-800 hover:text-blueprimary"
               >
-                About Us
+                About
               </a>
               <a
                 href="#testimonials"
-                className="px-4 py-2 text-gray-800 hover:text-blue-100"
+                className="px-4 py-2 text-gray-800 hover:text-blueprimary"
               >
                 Testimonials
               </a>
               <a
                 href="#contact"
-                className="px-4 py-2 text-gray-800 hover:text-blue-100"
+                className="px-4 py-2 text-gray-800 hover:text-blueprimary"
               >
-                Contact
+                Contact Us
               </a>
             </div>
           </div>
@@ -87,30 +87,30 @@ const NavbarEvent = () => {
         >
           <div className="flex flex-col items-start gap-4 px-4">
             <div className="flex gap-2 flex-col text-white font-semibold text-sm">
-              <a href="/" className="py-3 text-gray-800 hover:text-blue-100">
+              <a href="/" className="py-3 text-gray-800 hover:text-blueprimary">
                 Home
               </a>
               <a
                 href="#destinations"
-                className="py-3 text-gray-800 hover:text-blue-100"
+                className="py-3 text-gray-800 hover:text-blueprimary"
               >
                 Destinations
               </a>
               <a
                 href="#about"
-                className="py-3 text-gray-800 hover:text-blue-100"
+                className="py-3 text-gray-800 hover:text-blueprimary"
               >
                 About Us
               </a>
               <a
                 href="#testimonials"
-                className="py-3 text-gray-800 hover:text-blue-100"
+                className="py-3 text-gray-800 hover:text-blueprimary"
               >
                 Testimonials
               </a>
               <a
                 href="#contact"
-                className="py-3 text-gray-800 hover:text-blue-100"
+                className="py-3 text-gray-800 hover:text-blueprimary"
               >
                 Contact
               </a>

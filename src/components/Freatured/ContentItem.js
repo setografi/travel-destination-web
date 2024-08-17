@@ -1,5 +1,5 @@
-import { TextReveal } from "../Freatured/TextReveal";
-import { TextLinesReveal } from "../Freatured/TextLinesReveal";
+import { TextReveal } from "../freatured/TextReveal";
+import { TextLinesReveal } from "../freatured/TextLinesReveal";
 
 /**
  * Class representing a content item (.content__item).

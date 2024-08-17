@@ -1,7 +1,10 @@
 import React, { useEffect } from "react";
-import { preloadImages } from "./Freatured/utils";
-import { GridItem } from "./Freatured/GridItem";
 import gsap from "gsap";
+
+import { preloadImages } from "./freatured/utils";
+import { GridItem } from "./freatured/GridItem";
+import GridCell from "./freatured/GridCell";
+import ContentItems from "./freatured/ContentItems";
 
 function FeaturedDestinations() {
   useEffect(() => {
@@ -14,12 +17,128 @@ function FeaturedDestinations() {
     });
 
     // Optionally: Add any GSAP animations here
-    gsap.from(".frame__title", { opacity: 0, y: -50, duration: 1 });
+    gsap.from(".frame__title", { opacity: 5, y: -50, duration: 1 });
   }, []);
 
+  const gridItems = [
+    {
+      className: "grid__cell-c1-r1",
+      dataItem: "item-1",
+      style: { backgroundImage: "url(/images/img71.jpg)" },
+    },
+    {
+      className: "grid__cell-c3-r1",
+      dataItem: "item-2",
+      style: { backgroundImage: "url(/images/img72.jpg)" },
+    },
+    {
+      className: "grid__cell-c4-r1",
+      dataItem: "item-3",
+      style: { backgroundImage: "url(/images/img73.jpg)" },
+    },
+    {
+      className: "grid__cell-c1-r2",
+      dataItem: "item-4",
+      style: { backgroundImage: "url(/images/img71.jpg)" },
+    },
+    {
+      className: "grid__cell-c3-r2",
+      dataItem: "item-5",
+      style: { backgroundImage: "url(/images/img72.jpg)" },
+    },
+    {
+      className: "grid__cell-c2-r3",
+      dataItem: "item-6",
+      style: { backgroundImage: "url(/images/img73.jpg)" },
+    },
+    {
+      className: "grid__cell-c4-r3",
+      dataItem: "item-7",
+      style: { backgroundImage: "url(/images/img71.jpg)" },
+    },
+    {
+      className: "grid__cell-c1-r4",
+      dataItem: "item-8",
+      style: { backgroundImage: "url(/images/img72.jpg)" },
+    },
+    {
+      className: "grid__cell-c3-r4",
+      dataItem: "item-9",
+      style: { backgroundImage: "url(/images/img73.jpg)" },
+    },
+    {
+      className: "grid__cell-c3-r5",
+      dataItem: "item-10",
+      style: { backgroundImage: "url(/images/img71.jpg)" },
+    },
+  ];
+
+  const contentItems = [
+    {
+      id: "item-1",
+      number: "01",
+      heading: "Bali Paradise",
+      text: "Discover the exotic beaches of Bali, where turquoise waters meet vibrant culture and serene landscapes.",
+    },
+    {
+      id: "item-2",
+      number: "02",
+      heading: "Maldives Getaway",
+      text: "Escape to the Maldives, where luxury meets the sea. Experience crystal-clear waters and overwater bungalows.",
+    },
+    {
+      id: "item-3",
+      number: "03",
+      heading: "Santorini Bliss",
+      text: "Enjoy the breathtaking sunsets and unique beaches of Santorini, a picturesque destination in the Greek Isles.",
+    },
+    {
+      id: "item-4",
+      number: "04",
+      heading: "Hawaiian Adventure",
+      text: "Explore the diverse beaches of Hawaii, from volcanic black sands to golden shores, perfect for every traveler.",
+    },
+    {
+      id: "item-5",
+      number: "05",
+      heading: "Phuket Escape",
+      text: "Unwind on the pristine beaches of Phuket, Thailand, known for its turquoise waters and lively atmosphere.",
+    },
+    {
+      id: "item-6",
+      number: "06",
+      heading: "Seychelles Serenity",
+      text: "Relax in the untouched beauty of Seychelles, where white sand beaches and lush jungles create a perfect getaway.",
+    },
+    {
+      id: "item-7",
+      number: "07",
+      heading: "Ibiza Beaches",
+      text: "Enjoy the lively beaches of Ibiza, where the Mediterranean sun meets vibrant nightlife and stunning views.",
+    },
+    {
+      id: "item-8",
+      number: "08",
+      heading: "Gold Coast Wonders",
+      text: "Discover Australia’s Gold Coast, a surfer’s paradise with endless golden sands and thrilling beach activities.",
+    },
+    {
+      id: "item-9",
+      number: "09",
+      heading: "Bora Bora Retreat",
+      text: "Escape to the tranquil waters of Bora Bora, a luxury destination with stunning lagoon views and serene beaches.",
+    },
+    {
+      id: "item-10",
+      number: "10",
+      heading: "Amalfi Coast Charm",
+      text: "Experience the charm of Italy’s Amalfi Coast, where dramatic cliffs meet serene beaches and vibrant coastal towns.",
+    },
+  ];
+
   return (
-    <section id="destinations" className="bg-white w-full h-full py-16">
-      <h2 className="text-4xl text-center font-semibold mb-8">
+    <section id="destinations" className="bg-whiteText w-full h-full py-16">
+      <h2 className="text-4xl text-black text-center font-semibold mb-8">
         Featured Destinations
       </h2>
       <div className="loading">
@@ -27,466 +146,54 @@ function FeaturedDestinations() {
           <div className="grid grid--large">
             <div className="grid__cell grid__cell-c4-r2 grid__cell--padded">
               <div className="frame">
-                <h1 className="frame__title oh">
-                  <span className="oh__inner">Grid Zoom Effect</span>
+                <h1 className="frame__title text-base font-normal mt-8 overflow-hidden">
+                  <span className="oh__inner inline-block origin-left will-change-transform">
+                    Explore hidden coastal paradises with BeachVibe. Discover
+                    the best beach destinations that offer natural beauty and
+                    tranquility, perfect for your dream vacation.
+                  </span>
                 </h1>
-                <nav className="frame__links">
-                  <a href="" className="oh">
-                    <span className="oh__inner">Article</span>
-                  </a>
-                  <a href="/" className="oh">
-                    <span className="oh__inner">Previous demo</span>
-                  </a>
-                  <a href="/" className="oh">
-                    <span className="oh__inner">GitHub</span>
-                  </a>
-                </nav>
               </div>
             </div>
             <div className="grid__cell grid__cell-c2-r2 grid__cell--padded">
-              <a href="/" className="oh">
-                <span className="oh__inner">@setografi</span>
+              <a href="/" className="oh overflow-hidden">
+                <span className="oh__inner inline-block origin-left will-change-transform">
+                  @setografi
+                </span>
               </a>
             </div>
-            <div className="grid__cell grid__cell-c1-r1">
-              <div className="grid__cell-img">
-                <div
-                  className="grid__cell-img-inner"
-                  style={{ backgroundImage: "url(/images/img71.jpg)" }}
-                  data-item="item-1"
-                ></div>
-              </div>
-            </div>
-            <div className="grid__cell grid__cell-c3-r1">
-              <div className="grid__cell-img">
-                <div
-                  className="grid__cell-img-inner"
-                  style={{ backgroundImage: "url(/images/img71.jpg)" }}
-                  data-item="item-2"
-                ></div>
-              </div>
-            </div>
-            <div className="grid__cell grid__cell-c4-r1">
-              <div className="grid__cell-img">
-                <div
-                  className="grid__cell-img-inner"
-                  style={{ backgroundImage: "url(/images/img71.jpg)" }}
-                  data-item="item-3"
-                ></div>
-              </div>
-            </div>
-            <div className="grid__cell grid__cell-c1-r2">
-              <div className="grid__cell-img">
-                <div
-                  className="grid__cell-img-inner"
-                  style={{ backgroundImage: "url(/images/img71.jpg)" }}
-                  data-item="item-4"
-                ></div>
-              </div>
-            </div>
-            <div className="grid__cell grid__cell-c3-r2">
-              <div className="grid__cell-img">
-                <div
-                  className="grid__cell-img-inner"
-                  style={{ backgroundImage: "url(/images/img71.jpg)" }}
-                  data-item="item-5"
-                ></div>
-              </div>
-            </div>
-            <div className="grid__cell grid__cell-c2-r3">
-              <div className="grid__cell-img">
-                <div
-                  className="grid__cell-img-inner"
-                  style={{ backgroundImage: "url(/images/img71.jpg)" }}
-                  data-item="item-6"
-                ></div>
-              </div>
-            </div>
-            <div className="grid__cell grid__cell-c4-r3">
-              <div className="grid__cell-img">
-                <div
-                  className="grid__cell-img-inner"
-                  style={{ backgroundImage: "url(/images/img71.jpg)" }}
-                  data-item="item-7"
-                ></div>
-              </div>
-            </div>
-            <div className="grid__cell grid__cell-c1-r4">
-              <div className="grid__cell-img">
-                <div
-                  className="grid__cell-img-inner"
-                  style={{ backgroundImage: "url(/images/img71.jpg)" }}
-                  data-item="item-8"
-                ></div>
-              </div>
-            </div>
-            <div className="grid__cell grid__cell-c3-r4">
-              <div className="grid__cell-img">
-                <div
-                  className="grid__cell-img-inner"
-                  style={{ backgroundImage: "url(/images/img71.jpg)" }}
-                  data-item="item-9"
-                ></div>
-              </div>
-            </div>
-            <div className="grid__cell grid__cell-c3-r5">
-              <div className="grid__cell-img">
-                <div
-                  className="grid__cell-img-inner"
-                  style={{ backgroundImage: "url(/images/img71.jpg)" }}
-                  data-item="item-10"
-                ></div>
-              </div>
-            </div>
+
+            {gridItems.map((item, index) => (
+              <GridCell key={index} {...item} />
+            ))}
           </div>
           <div className="content">
-            <div className="content__item" id="item-1">
-              <span className="content__item-number oh">
-                <span className="oh__inner">01</span>
-              </span>
-              <h2 className="content__item-heading oh">
-                <span className="oh__inner">Masses</span>
-              </h2>
-              <p className="content__item-text">
-                The instruments by which public opinion is organized and focused
-                may be misused. But such organization and focusing are necessary
-                to orderly life.
-              </p>
-              <a className="content__item-link oh">
-                <span className="oh__inner">View more</span>
-              </a>
-              <nav className="slide-nav">
-                <div
-                  className="slide-nav__img slide-nav__img--prev"
-                  style={{ backgroundImage: "url(/images/img71.jpg)" }}
-                ></div>
-                <div
-                  className="slide-nav__img slide-nav__img--next"
-                  style={{ backgroundImage: "url(/images/img71.jpg)" }}
-                ></div>
-              </nav>
-            </div>
-            <div className="content__item" id="item-2">
-              <span className="content__item-number oh">
-                <span className="oh__inner">02</span>
-              </span>
-              <h2 className="content__item-heading oh">
-                <span className="oh__inner">Invisible</span>
-              </h2>
-              <p className="content__item-text">
-                As civilization has become more complex, and as the need for
-                invisible government has been increas ingly demonstrated, the
-                technical means have been invented and developed by which
-                opinion may be regimented.
-              </p>
-              <a className="content__item-link oh">
-                <span className="oh__inner">View more</span>
-              </a>
-              <nav className="slide-nav">
-                <div
-                  className="slide-nav__img slide-nav__img--prev"
-                  style={{ backgroundImage: "url(/images/img71.jpg)" }}
-                ></div>
-                <div
-                  className="slide-nav__img slide-nav__img--next"
-                  style={{ backgroundImage: "url(/images/img71.jpg)" }}
-                ></div>
-              </nav>
-            </div>
-            <div className="content__item" id="item-3">
-              <span className="content__item-number oh">
-                <span className="oh__inner">03</span>
-              </span>
-              <h2 className="content__item-heading oh">
-                <span className="oh__inner">Expense</span>
-              </h2>
-              <p className="content__item-text">
-                The invisible government tends to be concentrated in the hands
-                of the few because of the expense of manipulating the social
-                machinery which controls the opinions and habits of the masses.
-              </p>
-              <a className="content__item-link oh">
-                <span className="oh__inner">View more</span>
-              </a>
-              <nav className="slide-nav">
-                <div
-                  className="slide-nav__img slide-nav__img--prev"
-                  style={{ backgroundImage: "url(/images/img71.jpg)" }}
-                ></div>
-                <div
-                  className="slide-nav__img slide-nav__img--next"
-                  style={{ backgroundImage: "url(/images/img71.jpg)" }}
-                ></div>
-              </nav>
-            </div>
-            <div className="content__item" id="item-4">
-              <span className="content__item-number oh">
-                <span className="oh__inner">04</span>
-              </span>
-              <h2 className="content__item-heading oh">
-                <span className="oh__inner">Mechanism</span>
-              </h2>
-              <p className="content__item-text">
-                No matter how sophisticated, how cynical the public may become
-                about publicity methods, it must respond to the basic appeals,
-                because it will always need food, crave amusement, long for
-                beauty, respond to leadership.
-              </p>
-              <a className="content__item-link oh">
-                <span className="oh__inner">View more</span>
-              </a>
-              <nav className="slide-nav">
-                <div
-                  className="slide-nav__img slide-nav__img--prev"
-                  style={{ backgroundImage: "url(/images/img71.jpg)" }}
-                ></div>
-                <div
-                  className="slide-nav__img slide-nav__img--next"
-                  style={{ backgroundImage: "url(/images/img71.jpg)" }}
-                ></div>
-              </nav>
-            </div>
-            <div className="content__item" id="item-5">
-              <span className="content__item-number oh">
-                <span className="oh__inner">05</span>
-              </span>
-              <h2 className="content__item-heading oh">
-                <span className="oh__inner">Millions</span>
-              </h2>
-              <p className="content__item-text">
-                This practice of creating circumstances and of creating pictures
-                in the minds of millions of persons is very common.
-              </p>
-              <a className="content__item-link oh">
-                <span className="oh__inner">View more</span>
-              </a>
-              <nav className="slide-nav">
-                <div
-                  className="slide-nav__img slide-nav__img--prev"
-                  style={{ backgroundImage: "url(/images/img71.jpg)" }}
-                ></div>
-                <div
-                  className="slide-nav__img slide-nav__img--next"
-                  style={{ backgroundImage: "url(/images/img71.jpg)" }}
-                ></div>
-              </nav>
-            </div>
-            <div className="content__item" id="item-6">
-              <span className="content__item-number oh">
-                <span className="oh__inner">06</span>
-              </span>
-              <h2 className="content__item-heading oh">
-                <span className="oh__inner">Continuous</span>
-              </h2>
-              <p className="content__item-text">
-                The important thing is that it is universal and continuous; and
-                in its sum total it is regimenting the public mind every bit as
-                much as an army regiments the bodies of its soldiers.
-              </p>
-              <a className="content__item-link oh">
-                <span className="oh__inner">View more</span>
-              </a>
-              <nav className="slide-nav">
-                <div
-                  className="slide-nav__img slide-nav__img--prev"
-                  style={{ backgroundImage: "url(/images/img71.jpg)" }}
-                ></div>
-                <div
-                  className="slide-nav__img slide-nav__img--next"
-                  style={{ backgroundImage: "url(/images/img71.jpg)" }}
-                ></div>
-              </nav>
-            </div>
-            <div className="content__item" id="item-7">
-              <span className="content__item-number oh">
-                <span className="oh__inner">07</span>
-              </span>
-              <h2 className="content__item-heading oh">
-                <span className="oh__inner">Irresistible</span>
-              </h2>
-              <p className="content__item-text">
-                When regimented, a group at times offers an irresistible
-                pressure before which legislators, editors, and teachers are
-                helpless.
-              </p>
-              <a className="content__item-link oh">
-                <span className="oh__inner">View more</span>
-              </a>
-              <nav className="slide-nav">
-                <div
-                  className="slide-nav__img slide-nav__img--prev"
-                  style={{ backgroundImage: "url(/images/img71.jpg)" }}
-                ></div>
-                <div
-                  className="slide-nav__img slide-nav__img--next"
-                  style={{ backgroundImage: "url(/images/img71.jpg)" }}
-                ></div>
-              </nav>
-            </div>
-            <div className="content__item" id="item-8">
-              <span className="content__item-number oh">
-                <span className="oh__inner">08</span>
-              </span>
-              <h2 className="content__item-heading oh">
-                <span className="oh__inner">Pressure</span>
-              </h2>
-              <p className="content__item-text">
-                A desire for a specific reform, however widespread, cannot be
-                translated into action until it is made articulate, and until it
-                has exerted sufficient pressure upon the proper law-making
-                bodies.
-              </p>
-              <a className="content__item-link oh">
-                <span className="oh__inner">View more</span>
-              </a>
-              <nav className="slide-nav">
-                <div
-                  className="slide-nav__img slide-nav__img--prev"
-                  style={{ backgroundImage: "url(/images/img71.jpg)" }}
-                ></div>
-                <div
-                  className="slide-nav__img slide-nav__img--next"
-                  style={{ backgroundImage: "url(/images/img71.jpg)" }}
-                ></div>
-              </nav>
-            </div>
-            <div className="content__item" id="item-9">
-              <span className="content__item-number oh">
-                <span className="oh__inner">09</span>
-              </span>
-              <h2 className="content__item-heading oh">
-                <span className="oh__inner">Interests</span>
-              </h2>
-              <p className="content__item-text">
-                In the active proselytizing minorities in whom selfish interests
-                and public interests coincide lie the progress and development
-                of America.
-              </p>
-              <a className="content__item-link oh">
-                <span className="oh__inner">View more</span>
-              </a>
-              <nav className="slide-nav">
-                <div
-                  className="slide-nav__img slide-nav__img--prev"
-                  style={{ backgroundImage: "url(/images/img71.jpg)" }}
-                ></div>
-                <div
-                  className="slide-nav__img slide-nav__img--next"
-                  style={{ backgroundImage: "url(/images/img71.jpg)" }}
-                ></div>
-              </nav>
-            </div>
-            <div className="content__item" id="item-10">
-              <span className="content__item-number oh">
-                <span className="oh__inner">10</span>
-              </span>
-              <h2 className="content__item-heading oh">
-                <span className="oh__inner">Think</span>
-              </h2>
-              <p className="content__item-text">
-                Small groups of persons can, and do, make the rest of us think
-                what they please about a given subject.
-              </p>
-              <a className="content__item-link oh">
-                <span className="oh__inner">View more</span>
-              </a>
-              <nav className="slide-nav">
-                <div
-                  className="slide-nav__img slide-nav__img--prev"
-                  style={{ backgroundImage: "url(/images/img71.jpg)" }}
-                ></div>
-                <div
-                  className="slide-nav__img slide-nav__img--next"
-                  style={{ backgroundImage: "url(/images/img71.jpg)" }}
-                ></div>
-              </nav>
-            </div>
-            <button className="back">
-              <svg viewBox="0 0 50 9" width="100%">
-                <path d="M0 4.5l5-3M0 4.5l5 3M50 4.5h-77"></path>
-              </svg>
+            {contentItems.map((item, index) => {
+              return (
+                <ContentItems
+                  key={index}
+                  id={item.id}
+                  number={item.number}
+                  heading={item.heading}
+                  text={item.text}
+                />
+              );
+            })}
+
+            <button className="back bg-none opacity-0 w-12 mb-6 stroke-black hover:text-bluePrimary pointer-events-none cursor-pointer z-[1000]">
+              <i className="ri-arrow-left-line"></i>
+              <span>Back</span>
             </button>
             <nav className="grid grid--mini">
-              <div className="grid__cell grid__cell-c1-r1">
-                <div className="grid__cell-img">
-                  <div
-                    className="grid__cell-img-inner"
-                    style={{ backgroundImage: "url(/images/img71.jpg)" }}
-                  ></div>
-                </div>
-              </div>
-              <div className="grid__cell grid__cell-c3-r1">
-                <div className="grid__cell-img">
-                  <div
-                    className="grid__cell-img-inner"
-                    style={{ backgroundImage: "url(/images/img71.jpg)" }}
-                  ></div>
-                </div>
-              </div>
-              <div className="grid__cell grid__cell-c4-r1">
-                <div className="grid__cell-img">
-                  <div
-                    className="grid__cell-img-inner"
-                    style={{ backgroundImage: "url(/images/img71.jpg)" }}
-                  ></div>
-                </div>
-              </div>
-              <div className="grid__cell grid__cell-c1-r2">
-                <div className="grid__cell-img">
-                  <div
-                    className="grid__cell-img-inner"
-                    style={{ backgroundImage: "url(/images/img71.jpg)" }}
-                  ></div>
-                </div>
-              </div>
-              <div className="grid__cell grid__cell-c3-r2">
-                <div className="grid__cell-img">
-                  <div
-                    className="grid__cell-img-inner"
-                    style={{ backgroundImage: "url(/images/img71.jpg)" }}
-                  ></div>
-                </div>
-              </div>
-              <div className="grid__cell grid__cell-c2-r3">
-                <div className="grid__cell-img">
-                  <div
-                    className="grid__cell-img-inner"
-                    style={{ backgroundImage: "url(/images/img71.jpg)" }}
-                  ></div>
-                </div>
-              </div>
-              <div className="grid__cell grid__cell-c4-r3">
-                <div className="grid__cell-img">
-                  <div
-                    className="grid__cell-img-inner"
-                    style={{ backgroundImage: "url(/images/img71.jpg)" }}
-                  ></div>
-                </div>
-              </div>
-              <div className="grid__cell grid__cell-c1-r4">
-                <div className="grid__cell-img">
-                  <div
-                    className="grid__cell-img-inner"
-                    style={{ backgroundImage: "url(/images/img71.jpg)" }}
-                  ></div>
-                </div>
-              </div>
-              <div className="grid__cell grid__cell-c3-r4">
-                <div className="grid__cell-img">
-                  <div
-                    className="grid__cell-img-inner"
-                    style={{ backgroundImage: "url(/images/img71.jpg)" }}
-                  ></div>
-                </div>
-              </div>
-              <div className="grid__cell grid__cell-c3-r5">
-                <div className="grid__cell-img">
-                  <div
-                    className="grid__cell-img-inner"
-                    style={{ backgroundImage: "url(/images/img71.jpg)" }}
-                  ></div>
-                </div>
-              </div>
+              {gridItems.map((item, index) => {
+                return (
+                  <GridCell
+                    key={index}
+                    className={item.className}
+                    style={item.style}
+                  />
+                );
+              })}
             </nav>
           </div>
         </div>

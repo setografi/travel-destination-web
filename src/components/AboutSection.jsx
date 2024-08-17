@@ -3,21 +3,11 @@ import MeterImage from "../assets/img/meter.svg";
 
 function AboutSection() {
   return (
-    <section id="about" className="w-full h-full py-16 bg-white">
-      {/* <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-4xl font-semibold mb-6">About Us</h2>
-        <p className="text-xl">
-          At BeachVibe, we believe that the perfect beach getaway should be
-          accessible to everyone. Whether you're looking for adventure,
-          relaxation, or a bit of both, we are here to guide you to the best
-          beaches around the world.
-        </p>
-      </div> */}
-
-      <div className="w-full max-w-4xl mx-auto pb-24">
+    <section id="about" className="bg-[#fafafa] w-full h-full pt-16">
+      <div className="w-full max-w-4xl mx-auto pb-16">
         <h2 className="text-4xl font-semibold mb-6 text-black">About Us</h2>
         <div className="flex flex-wrap justify-between gap-5 lg:gap-10">
-          <h2 className="text-xl font-bold max-w-[390px]">
+          <h2 className="text-xl text-black font-bold max-w-[390px]">
             Guide You to Easy Path
           </h2>
           <p className="text-base text-black max-w-[520px]">

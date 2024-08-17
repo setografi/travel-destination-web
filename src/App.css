@@ -10,6 +10,8 @@
   --color-bg: #f7f5ee;
   --color-link: #000;
   --color-link-hover: #000;
+  --bright-navy-blue: hsl(214, 57%, 51%);
+  --white: hsl(0, 0%, 100%);
 }
 
 body {
@@ -69,40 +71,6 @@ body {
   }
 }
 
-a {
-  text-decoration: none;
-  color: var(--color-link);
-  outline: none;
-  font-weight: 600;
-}
-
-a:hover {
-  color: var(--color-link-hover);
-  outline: none;
-}
-
-/* Better focus styles from https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible */
-a:focus {
-  /* Provide a fallback style for browsers
-	 that don't support :focus-visible */
-  outline: none;
-  background: lightgrey;
-}
-
-a:focus:not(:focus-visible) {
-  /* Remove the focus indicator on mouse-focus for browsers
-	 that do support :focus-visible */
-  background: transparent;
-}
-
-a:focus-visible {
-  /* Draw a very noticeable focus style for
-	 keyboard-focus on browsers that do support
-	 :focus-visible */
-  outline: 2px solid red;
-  background: transparent;
-}
-
 .unbutton {
   background: none;
   border: 0;
@@ -126,11 +94,11 @@ a:focus-visible {
   overflow: hidden;
 }
 
-.oh__inner {
+/* .oh__inner {
   display: inline-block;
   transform-origin: 0% 50%;
   will-change: transform;
-}
+} */
 
 .frame {
   height: 100%;
@@ -149,26 +117,6 @@ a:focus-visible {
   z-index: 1;
   display: grid;
   grid-template-columns: 38% 62%;
-}
-
-.frame__title {
-  font-size: 1rem;
-  font-weight: 400;
-  margin: 0 0 2rem 0;
-}
-
-.frame__links {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.frame__links a {
-  margin: 0 1rem 0.35rem 0;
-}
-
-.frame--fixed .frame__links {
-  flex-direction: row;
 }
 
 .grid {
@@ -256,16 +204,14 @@ a:focus-visible {
   pointer-events: auto;
 }
 
-.content__item-number {
+/* .content__item-number {
   font-weight: 600;
   display: block;
-}
+} */
 
 .content__item-heading {
-  font-size: 4vw;
   line-height: 1;
   margin: 1rem 0 3rem 0;
-  font-weight: 600;
 }
 
 .content__item-text {
@@ -318,7 +264,7 @@ a:focus-visible {
   background-position: 50% 50%;
 }
 
-.back {
+/* .back {
   background: none;
   border: 0;
   padding: 0;
@@ -339,7 +285,7 @@ a:focus-visible {
 .back:focus {
   outline: none;
   stroke: #823725;
-}
+} */
 
 .content--open .back {
   pointer-events: auto;

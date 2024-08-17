@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import Sketch from "./Sketch";
+import Sketch from "../Hero/Sketch";
 import axios from "axios";
 // import dat from "dat.gui";
 
