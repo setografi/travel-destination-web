@@ -1,10 +1,11 @@
 import React, { useEffect } from "react";
-import gsap from "gsap";
 
 import { preloadImages } from "./featured/utils";
 import { GridItem } from "./featured/GridItem";
 import GridCell from "./featured/GridCell";
 import ContentItems from "./featured/ContentItems";
+
+import gsap from "gsap";
 
 function FeaturedDestinations() {
   useEffect(() => {
