@@ -138,16 +138,21 @@ function FeaturedDestinations() {
   ];
 
   return (
-    <section id="destinations" className="bg-whiteText w-full h-full py-16">
-      <h2 className="text-4xl text-black text-center font-semibold mb-8">
-        Featured Destinations
-      </h2>
+    <section
+      id="destinations"
+      className="bg-gradient-to-b from-whiteText to-[#fafafa] w-full h-full py-16 px-6 md:px-0"
+    >
       <div className="loading">
         <div>
           <div className="grid grid--large">
+            <h1 className="frame__title oh text-xl md:text-4xl text-black text-start font-semibold md:my-8 mx-2 overflow-hidden">
+              <span className="oh__inner inline-block origin-left will-change-transform">
+                Featured Destinations
+              </span>
+            </h1>
             <div className="grid__cell grid__cell-c4-r2 grid__cell--padded">
               <div className="frame">
-                <h1 className="frame__title text-base font-normal mt-8 overflow-hidden">
+                <h1 className="frame__title oh text-sm md:text-base font-normal md:my-8 overflow-hidden">
                   <span className="oh__inner inline-block origin-left will-change-transform">
                     Explore hidden coastal paradises with BeachVibe. Discover
                     the best beach destinations that offer natural beauty and
@@ -156,7 +161,7 @@ function FeaturedDestinations() {
                 </h1>
               </div>
             </div>
-            <div className="grid__cell grid__cell-c2-r2 grid__cell--padded">
+            <div className="grid__cell grid__cell-c2-r2 grid__cell--padded hidden md:block">
               <a href="/" className="oh overflow-hidden">
                 <span className="oh__inner inline-block origin-left will-change-transform">
                   @setografi
@@ -168,7 +173,7 @@ function FeaturedDestinations() {
               <GridCell key={index} {...item} />
             ))}
           </div>
-          <div className="content">
+          <div className="content fixed top-0 left-0 w-full h-full z-10 pointer-events-none flex flex-col justify-between">
             {contentItems.map((item, index) => {
               return (
                 <ContentItems

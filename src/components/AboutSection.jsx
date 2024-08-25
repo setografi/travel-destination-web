@@ -4,7 +4,7 @@ import MeterImage from "../assets/img/meter.svg";
 function AboutSection() {
   return (
     <section id="about" className="bg-[#fafafa] w-full h-full pt-16">
-      <div className="w-full max-w-4xl mx-auto pb-16">
+      <div className="w-full pb-16 px-6 md:px-20">
         <h2 className="text-4xl font-semibold mb-6 text-black">About Us</h2>
         <div className="flex flex-wrap justify-between gap-5 lg:gap-10">
           <h2 className="text-xl text-black font-bold max-w-[390px]">
