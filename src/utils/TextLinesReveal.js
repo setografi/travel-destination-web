@@ -1,6 +1,7 @@
-import SplitType from "split-type";
-import { wrapLines } from "./utils";
 import { gsap } from "gsap";
+import SplitType from "split-type";
+
+import { wrapLines } from "./utils";
 
 export class TextLinesReveal {
   constructor(animationElems) {

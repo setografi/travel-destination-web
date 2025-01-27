@@ -1,13 +1,12 @@
 import React, { useEffect } from "react";
+import { gsap } from "gsap";
 
-import { preloadImages } from "./featured/utils";
-import { GridItem } from "./featured/GridItem";
-import GridCell from "./featured/GridCell";
-import ContentItems from "./featured/ContentItems";
+import { preloadImages } from "../../utils/utils";
+import { GridItem } from "../../utils/GridItem";
+import GridCell from "../common/GridCell";
+import ContentItems from "../common/ContentItems";
 
-import gsap from "gsap";
-
-function FeaturedDestinations() {
+function Featured() {
   useEffect(() => {
     // Initialize the grid
     new GridItem(document.querySelector(".grid--large"));
@@ -140,39 +139,42 @@ function FeaturedDestinations() {
   return (
     <section
       id="destinations"
-      className="bg-gradient-to-b from-whiteText to-[#fafafa] w-full h-full py-16 px-6 md:px-0"
+      className="bg-primary-100 w-full h-full py-16 sm:py-20 lg:py-24"
     >
       <div className="loading">
-        <div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-20">
           <div className="grid grid--large">
-            <h1 className="frame__title oh text-xl md:text-4xl text-black text-start font-semibold md:my-8 mx-2 overflow-hidden">
-              <span className="oh__inner inline-block origin-left will-change-transform">
+            <h1 className="frame__title oh text-neutral-m text-3xl sm:text-4xl text-start md:my-8 mx-2 overflow-hidden">
+              <span className="oh__inner inline-block origin-left will-change-transform font-merriweather font-semibold">
                 Featured Destinations
               </span>
             </h1>
             <div className="grid__cell grid__cell-c4-r2 grid__cell--padded">
               <div className="frame">
-                <h1 className="frame__title oh text-sm md:text-base font-normal md:my-8 overflow-hidden">
+                <p className="frame__title oh text-sm md:text-base font-normal md:my-8 overflow-hidden">
                   <span className="oh__inner inline-block origin-left will-change-transform">
-                    Explore hidden coastal paradises with BeachVibe. Discover
-                    the best beach destinations that offer natural beauty and
-                    tranquility, perfect for your dream vacation.
+                    Discover hidden coastal paradises with BeachVibe your
+                    perfect beach escape for natural beauty and tranquility.
                   </span>
-                </h1>
+                </p>
               </div>
             </div>
+
             <div className="grid__cell grid__cell-c2-r2 grid__cell--padded hidden md:block">
-              <a href="/" className="oh overflow-hidden">
+              <p className="oh overflow-hidden">
                 <span className="oh__inner inline-block origin-left will-change-transform">
-                  @setografi
+                  BeachVibe Gallery: A collection of the most-visited beaches,
+                  showcasing stunning coastlines, vibrant sunsets, and the
+                  perfect spots for your next seaside adventure.
                 </span>
-              </a>
+              </p>
             </div>
 
             {gridItems.map((item, index) => (
               <GridCell key={index} {...item} />
             ))}
           </div>
+
           <div className="content fixed top-0 left-0 w-full h-full z-10 pointer-events-none flex flex-col justify-between">
             {contentItems.map((item, index) => {
               return (
@@ -186,10 +188,11 @@ function FeaturedDestinations() {
               );
             })}
 
-            <button className="back bg-none opacity-0 w-12 mb-6 stroke-black hover:text-bluePrimary pointer-events-none cursor-pointer z-[1000]">
+            <button className="group back bg-none opacity-0 w-12 mb-6 pointer-events-none cursor-pointer z-[1000]">
               <i className="ri-arrow-left-line"></i>
-              <span>Back</span>
+              <span className="text-neutral-m group-hover:underline">Back</span>
             </button>
+
             <nav className="grid grid--mini">
               {gridItems.map((item, index) => {
                 return (
@@ -208,4 +211,4 @@ function FeaturedDestinations() {
   );
 }
 
-export default FeaturedDestinations;
+export default Featured;

@@ -1,21 +1,20 @@
 import React from "react";
-import HeroSection from "../components/HeroSection";
-import FeaturedDestinations from "../components/FeaturedDestinations";
-import AboutSection from "../components/AboutSection";
-import TestimonialsSection from "../components/TestimonialsSection";
-import CtaSection from "../components/CtaSection";
-import ServicesSection from "../components/ServicesSection";
+
+import Hero from "../components/hero/Hero";
+import Services from "../components/hero/Services";
+import About from "../components/hero/About";
+import Featured from "../components/hero/Featured";
+import Cta from "../components/hero/Cta";
 
 function HomePage() {
   return (
-    <div className="w-full h-full">
-      <HeroSection />
-      <ServicesSection />
-      <AboutSection />
-      <FeaturedDestinations />
-      <TestimonialsSection />
-      <CtaSection />
-    </div>
+    <>
+      <Hero />
+      <Services />
+      <About />
+      <Featured />
+      <Cta />
+    </>
   );
 }
 

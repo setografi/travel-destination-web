@@ -1,5 +1,5 @@
-import { TextReveal } from "../featured/TextReveal";
-import { TextLinesReveal } from "../featured/TextLinesReveal";
+import { TextReveal } from "./TextReveal";
+import { TextLinesReveal } from "./TextLinesReveal";
 
 /**
  * Class representing a content item (.content__item).
@@ -21,10 +21,10 @@ export class ContentItem {
    */
   constructor(DOM_el) {
     this.DOM.el = DOM_el;
-    this.DOM.nav = {
-      prev: this.DOM.el.querySelector(".slide-nav__img--prev"),
-      next: this.DOM.el.querySelector(".slide-nav__img--next"),
-    };
+    // this.DOM.nav = {
+    //   prev: this.DOM.el.querySelector(".slide-nav__img--prev"),
+    //   next: this.DOM.el.querySelector(".slide-nav__img--next"),
+    // };
 
     // Text animations
     this.textReveal = new TextReveal([...this.DOM.el.querySelectorAll(".oh")]);

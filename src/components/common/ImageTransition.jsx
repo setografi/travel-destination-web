@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import Sketch from "./Sketch";
+import Sketch from "../../utils/Sketch";
 import axios from "axios";
 // import dat from "dat.gui";
 
@@ -36,11 +36,12 @@ function ImageTransition() {
     <div
       ref={contentRef}
       id="content"
-      className="relative flex flex-col w-full h-[calc(100vh-13rem)] justify-start items-start cursor-pointer md:h-screen md:justify-center"
+      className="absolute inset-0 w-full h-full"
     >
       <div
         ref={sliderRef}
         id="slider"
+        className="w-full h-full"
         data-images='["/images/img71.jpg","/images/img72.jpg","/images/img73.jpg"]'
         data-disp="/images/disp1.jpg"
       ></div>

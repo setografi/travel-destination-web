@@ -1,7 +1,8 @@
-import { ImageCell } from "./ImageCell";
-import { calcWinsize, adjustedBoundingRect } from "./utils";
-import { TextReveal } from "./TextReveal";
 import { gsap } from "gsap";
+
+import { calcWinsize, adjustedBoundingRect } from "./utils";
+import { ImageCell } from "./ImageCell";
+import { TextReveal } from "./TextReveal";
 
 // body element
 const bodyEl = document.body;
@@ -255,16 +256,16 @@ export class GridItem {
         },
         "start"
       )
-      .to(
-        [
-          imageCell.contentItem.DOM.nav.prev,
-          imageCell.contentItem.DOM.nav.next,
-        ],
-        {
-          y: 0,
-        },
-        "start"
-      )
+      // .to(
+      //   [
+      //     imageCell.contentItem.DOM.nav.prev,
+      //     imageCell.contentItem.DOM.nav.next,
+      //   ],
+      //   {
+      //     y: 0,
+      //   },
+      //   "start"
+      // )
       .to(
         this.otherImageCells,
         {
@@ -411,20 +412,20 @@ export class GridItem {
         },
         "showGrid"
       )
-      .to(
-        imageCell.contentItem.DOM.nav.prev,
-        {
-          y: "-100%",
-        },
-        "showGrid"
-      )
-      .to(
-        imageCell.contentItem.DOM.nav.next,
-        {
-          y: "100%",
-        },
-        "showGrid"
-      )
+      // .to(
+      //   imageCell.contentItem.DOM.nav.prev,
+      //   {
+      //     y: "-100%",
+      //   },
+      //   "showGrid"
+      // )
+      // .to(
+      //   imageCell.contentItem.DOM.nav.next,
+      //   {
+      //     y: "100%",
+      //   },
+      //   "showGrid"
+      // )
       .to(
         this.otherImageCells,
         {
@@ -502,20 +503,20 @@ export class GridItem {
         },
         "start"
       )
-      .to(
-        imageCell.contentItem.DOM.nav.prev,
-        {
-          y: "-100%",
-        },
-        "start"
-      )
-      .to(
-        imageCell.contentItem.DOM.nav.next,
-        {
-          y: "100%",
-        },
-        "start"
-      )
+      // .to(
+      //   imageCell.contentItem.DOM.nav.prev,
+      //   {
+      //     y: "-100%",
+      //   },
+      //   "start"
+      // )
+      // .to(
+      //   imageCell.contentItem.DOM.nav.next,
+      //   {
+      //     y: "100%",
+      //   },
+      //   "start"
+      // )
 
       .addLabel("showContent", ">-=0.4")
       .set(
@@ -537,17 +538,17 @@ export class GridItem {
         },
         "start"
       )
-      .to(
-        [
-          upcomingImageCell.contentItem.DOM.nav.prev,
-          upcomingImageCell.contentItem.DOM.nav.next,
-        ],
-        {
-          ease: "expo",
-          y: 0,
-        },
-        "showContent"
-      )
+      // .to(
+      //   [
+      //     upcomingImageCell.contentItem.DOM.nav.prev,
+      //     upcomingImageCell.contentItem.DOM.nav.next,
+      //   ],
+      //   {
+      //     ease: "expo",
+      //     y: 0,
+      //   },
+      //   "showContent"
+      // )
       .add(() => {
         upcomingImageCell.contentItem.textReveal.in();
         upcomingImageCell.contentItem.textLinesReveal.in();

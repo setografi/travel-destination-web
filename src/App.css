@@ -127,7 +127,7 @@ body {
 
 .grid--large {
   grid-auto-rows: 32vmin;
-  padding: 0.5vw;
+  /* padding: 0.5vw; */
   --grid-padding: 0.5vw;
 }
 
@@ -223,7 +223,7 @@ body {
   cursor: pointer;
 }
 
-.slide-nav {
+/* .slide-nav {
   position: fixed;
   width: 40%;
   right: 15%;
@@ -262,7 +262,7 @@ body {
   height: 100%;
   background-size: cover;
   background-position: 50% 50%;
-}
+} */
 
 /* .back {
   background: none;

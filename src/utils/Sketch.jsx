@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import gsap, { Power2 } from "gsap";
+import { gsap, Power2 } from "gsap";
 
 export default class Sketch {
   constructor(opts) {
